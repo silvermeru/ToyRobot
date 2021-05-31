@@ -1,19 +1,19 @@
 class ToyRobot():
 	def North(self):
-		if self.X < 4:
-			self.X += 1
+		if self.Y < 4:
+			self.Y += 1
 
 	def East(self):
-		if self.Y < 4:
-			self.Y +=1
+		if self.X < 4:
+			self.X +=1
 
 	def South(self):
-		if self.X > 0:
-			self.X = self.X - 1
-
-	def West(self):
 		if self.Y > 0:
 			self.Y -= 1
+
+	def West(self):
+		if self.X > 0:
+			self.X -= 1
 
 	def __init__(self):
 		self.X = 0
