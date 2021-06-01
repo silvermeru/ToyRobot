@@ -74,4 +74,4 @@ class ToyRobot():
 
 	def Report(self):
 		if self.Placed:
-			print("Output: " + str(self.X) + "," + str(self.Y) + "," + self.NumberToDirection.get(self.Direction, "Argument not found"))
+			return "Output: " + str(self.X) + "," + str(self.Y) + "," + self.NumberToDirection.get(self.Direction, "Argument not found")
