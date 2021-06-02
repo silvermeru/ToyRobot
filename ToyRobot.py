@@ -2,18 +2,22 @@ class ToyRobot():
 	def North(self):
 		if self.Y < 4:
 			self.Y += 1
+			return "Moved!"
 
 	def East(self):
 		if self.X < 4:
 			self.X +=1
+			return "Moved!"
 
 	def South(self):
 		if self.Y > 0:
 			self.Y -= 1
+			return "Moved!"
 
 	def West(self):
 		if self.X > 0:
 			self.X -= 1
+			return "Moved!"
 
 	def __init__(self):
 		self.X = 0
@@ -49,6 +53,7 @@ class ToyRobot():
 			self.Y = Y
 			self.Direction = self.DirectionToNumber.get(Direction, "Argument not found")
 			self.Placed = True
+			return "Placed !"
 
 	# Move robot one in unit in the direction it is facing
 	def Move(self):
@@ -63,6 +68,7 @@ class ToyRobot():
 				self.Direction = 3
 			else:
 				self.Direction -= 1
+			return "Turned Left!"
 
 	# Move Direction Right
 	def Right(self):
@@ -71,6 +77,7 @@ class ToyRobot():
 				self.Direction = 0
 			else:
 				self.Direction += 1
+			return "Turned Right!"
 
 	def Report(self):
 		if self.Placed:
