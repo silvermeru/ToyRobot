@@ -38,7 +38,7 @@ def index():
 		toks = text.split()
 		if toks[0] == "PLACE" and len(toks) == 4:
 			tr.Place(int(toks[1]),int(toks[2]),toks[3])
-		elif len(toks) == 1 and tok[0] != "PLACE":
+		elif len(toks) == 1 and toks[0] != "PLACE":
 			func = CMDReader.get(toks[0], None)
 			if func == None:
 				message = "Command Not Found"
