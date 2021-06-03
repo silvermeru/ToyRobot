@@ -41,9 +41,9 @@ def index():
 		elif len(toks) == 1 and toks[0] != "PLACE":
 			func = CMDReader.get(toks[0], None)
 			if func == None:
-				message = "Command Not Found"
+				message = "Command not found or badly formed"
 			else:
 				message = func()
 		else:
-			message = "Command Not Found"
+			message = "Command not found or badly formed"
 	return render_template('index.html', form=form, message=message)
