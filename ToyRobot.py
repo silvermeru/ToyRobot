@@ -61,12 +61,14 @@ class ToyRobot():
 			self.Y = Y
 			self.Direction = self.DirectionToNumber.get(Direction, "Argument not found")
 			self.Placed = True
+		return ""
 
 	# Move robot one in unit in the direction it is facing
 	def Move(self):
 		if self.Placed:
 			func = self.Mover.get(self.Direction, "Argument not found")
 			func()
+		return ""
 
 	# Move Direction Left
 	def Left(self):
@@ -75,6 +77,7 @@ class ToyRobot():
 				self.Direction = 3
 			else:
 				self.Direction -= 1
+		return ""
 
 	# Move Direction Right
 	def Right(self):
@@ -83,8 +86,10 @@ class ToyRobot():
 				self.Direction = 0
 			else:
 				self.Direction += 1
+		return ""
 
 	# Report the coordinates of the robot and the direction it is facing
 	def Report(self):
 		if self.Placed:
 			return "Output: " + str(self.X) + "," + str(self.Y) + "," + self.NumberToDirection.get(self.Direction, "Argument not found")
+		return	""
